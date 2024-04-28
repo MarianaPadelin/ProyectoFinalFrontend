@@ -1,0 +1,10 @@
+.list {
+  width: 100%;
+  max-width: 500;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+
+.usersContainer {
+  margin: 3vw;
+}
