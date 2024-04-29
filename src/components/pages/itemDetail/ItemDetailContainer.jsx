@@ -1,12 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { useParams } from "react-router-dom";
-// import { database } from "../../../firebaseConfig"
-// import {collection, getDoc, doc} from "firebase/firestore"
 import Loader from "../../common/Loader";
 import { CartContext } from "../../../context/CartContext";
 import { UserContext } from "../../../context/UserContext";
-// import Swal from "sweetalert2";
 import axios from "axios"
 
 const ItemDetailContainer = () => {

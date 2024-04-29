@@ -4,8 +4,7 @@ import { Box, TextField } from "@mui/material";
 // import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-// import { collection, getDocs, query, where } from "firebase/firestore";
-// import { database } from "../../../../firebaseConfig";
+
 import { useParams } from "react-router-dom";
 
 

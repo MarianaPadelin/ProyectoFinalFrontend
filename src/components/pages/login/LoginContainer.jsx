@@ -12,8 +12,9 @@ const LoginContainer = () => {
 
   const ingresarConGithub = async () => {
     window.open(
-      "https://proyectofinalbackend-production-12a7.up.railway.app/api/jwt/github",
-      "_self"
+      import.meta.env.VITE_URL
+      // "https://proyectofinalbackend-production-12a7.up.railway.app/api/jwt/github",
+      // "_self"
     );
 
     await axios

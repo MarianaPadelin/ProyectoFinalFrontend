@@ -9,7 +9,8 @@ import "./App.css"
 import axios from "axios"
 
 axios.defaults.baseURL =
-  "https://proyectofinalbackend-production-12a7.up.railway.app/";
+  import.meta.env.VITE_URL
+  // "https://proyectofinalbackend-production-12a7.up.railway.app";
 axios.defaults.withCredentials = true;
 
 function App() {
