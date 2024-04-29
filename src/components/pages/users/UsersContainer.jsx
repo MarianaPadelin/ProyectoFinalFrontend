@@ -18,10 +18,12 @@ const UsersContainer = () => {
   }
 
   async function eliminarUsuario(uid) {
+    console.log(uid)
     await axios.delete(`/api/users/${uid}`);
   }
 
   async function cambiarRol(uid) {
+    console.log(uid)
     await axios.put(`/api/users/${uid}`);
   }
 

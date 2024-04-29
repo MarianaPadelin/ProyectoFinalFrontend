@@ -36,6 +36,7 @@ const Users = ({ users, eliminarUsuario, cambiarRol, buscarUsuario, getUsers }) 
                         })
                           .then(async (result) => {
                             if (result.isConfirmed) {
+                              console.log(user._id)
                               await eliminarUsuario(user._id);
                             }
                           })
@@ -92,6 +93,7 @@ const Users = ({ users, eliminarUsuario, cambiarRol, buscarUsuario, getUsers }) 
                         })
                           .then((result) => {
                             if (result.isConfirmed) {
+                              console.log(user._id)
                               cambiarRol(user._id);
                               Swal.fire({
                                 title: "Listo",
