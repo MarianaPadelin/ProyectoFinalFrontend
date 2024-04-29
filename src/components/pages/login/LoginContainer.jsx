@@ -13,7 +13,7 @@ const LoginContainer = () => {
 
   const ingresarConGithub = async () => {
     window.open(
-      config.backendURL
+      `${config.backendURL}/api/jwt/github`
       // "https://proyectofinalbackend-production-12a7.up.railway.app/api/jwt/github",
       // "_self"
     );
