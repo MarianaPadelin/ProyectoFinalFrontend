@@ -7,9 +7,10 @@ import { UserContextProvider } from "./context/UserContext.jsx";
 import { rutasApp } from "./routes/rutasApp.js";
 import "./App.css"
 import axios from "axios"
+import { config } from "./config.js"
 
 axios.defaults.baseURL =
-  import.meta.env.VITE_URL
+  config.backendURL
   // "https://proyectofinalbackend-production-12a7.up.railway.app";
 axios.defaults.withCredentials = true;
 

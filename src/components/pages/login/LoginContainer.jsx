@@ -6,13 +6,14 @@ import Swal from "sweetalert2";
 import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext";
 import axios from "axios";
+import { config } from "../../../config";
 const LoginContainer = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
 
   const ingresarConGithub = async () => {
     window.open(
-      import.meta.env.VITE_URL
+      config.backendURL
       // "https://proyectofinalbackend-production-12a7.up.railway.app/api/jwt/github",
       // "_self"
     );
