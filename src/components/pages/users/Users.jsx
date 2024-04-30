@@ -12,7 +12,7 @@ const Users = ({ users, eliminarUsuario, cambiarRol, buscarUsuario, getUsers }) 
     <div className="usersContainer">
       {users.map((user) => {
         return (
-          <div key={user._id}>
+          <div key={user.id}>
             <Paper elevation={10}>
               <List className="list">
                 <ListItem alignItems="flex-start">
@@ -36,12 +36,12 @@ const Users = ({ users, eliminarUsuario, cambiarRol, buscarUsuario, getUsers }) 
                         })
                           .then(async (result) => {
                             if (result.isConfirmed) {
-                              console.log(user._id)
-                              await eliminarUsuario(user._id);
+                              console.log(user.id)
+                              await eliminarUsuario(user.id);
                             }
                           })
                           .then(async () => {
-                              const usuario = await buscarUsuario(user._id)
+                              const usuario = await buscarUsuario(user.id)
                               if(!usuario){
                                        Swal.fire({
                                          title: "Listo",
@@ -93,8 +93,8 @@ const Users = ({ users, eliminarUsuario, cambiarRol, buscarUsuario, getUsers }) 
                         })
                           .then((result) => {
                             if (result.isConfirmed) {
-                              console.log(user._id);
-                              cambiarRol(user._id);
+                              console.log(user.id);
+                              cambiarRol(user.id);
                               Swal.fire({
                                 title: "Listo",
                                 text: "Rol modificado",
