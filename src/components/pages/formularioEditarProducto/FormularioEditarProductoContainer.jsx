@@ -51,14 +51,13 @@ export const FormularioEditarProductoContainer = () => {
   const { handleChange, handleSubmit } = useFormik({
     initialValues: {
       nombre: datosPrevios.title,
-      tamaño: "",
       stock: datosPrevios.stock,
       price: datosPrevios.price,
       peso: datosPrevios.code,
       category: datosPrevios.category,
       description: datosPrevios.description,
-      //   img: datosPrevios.thumbnails[0],
-      //   img2: datosPrevios.thumbnails[1],
+      // img: datosPrevios.thumbnails[0],
+      // img2: datosPrevios.thumbnails[1],
     },
     onSubmit: (info) => {
       Swal.fire({

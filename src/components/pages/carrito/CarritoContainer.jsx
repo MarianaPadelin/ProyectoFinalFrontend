@@ -8,10 +8,7 @@ import { UserContext } from "../../../context/UserContext";
 
 const CarritoContainer = () => {
   const { user } = useContext(UserContext);
-  let nombreUsuario = "";
-  if (user) {
-    nombreUsuario = user.name;
-  }
+
 
   const {
     cart,
@@ -25,6 +22,11 @@ const CarritoContainer = () => {
     // sumaPrecios,
   } = useContext(CartContext);
 
+  let nombreUsuario = "";
+
+  if (user) {
+    nombreUsuario = user.name;
+  }
 
  
   const preguntaLimpiar = () => {

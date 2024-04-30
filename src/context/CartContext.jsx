@@ -11,10 +11,9 @@ export const CartContext = createContext();
 //creo un componente que va a ser el proveedor del contexto
 export const CartContextProvider = ({ children }) => {
   const { user } = useContext(UserContext);
-
   const [cart, setCart] = useState([]);
   const navigate = useNavigate()
-  
+
   useEffect(() => {
     if (!user) {
       return setCart([]);
@@ -26,8 +25,6 @@ export const CartContextProvider = ({ children }) => {
       .get(`/users/cart/${cid}`)
       .then((res) => {
         let cartFound = res.data.products;
-
-
         return setCart(cartFound);
       })
       .catch((error) => {

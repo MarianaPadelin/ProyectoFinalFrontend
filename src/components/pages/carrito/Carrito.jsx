@@ -57,7 +57,6 @@ const Carrito = ({
         
         <div>
           {cart.map((producto) => {
-            // console.log(producto)
             return (
               <div key={producto._id._id}>
                 <Paper elevation={10}>
