@@ -16,7 +16,7 @@ import {
   Chip,
   IconButton,
   Paper,
-  TextField,
+  // TextField,
   Tooltip,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -28,10 +28,10 @@ const Carrito = ({
   eliminarElemento,
   preguntaLimpiar,
   darPrecioTotal,
-  handleSubmit,
-  handleChange,
-  totalEnvio,
-  precioFinal,
+  // handleSubmit,
+  // handleChange,
+  // totalEnvio,
+  // precioFinal,
 }) => {
   return (
     <>
@@ -171,7 +171,7 @@ const Carrito = ({
                 <Typography variant="h5" component="div">
                   El precio de los productos es ${darPrecioTotal}
                 </Typography>
-                <br></br>
+                {/* <br></br>
                 <form onSubmit={handleSubmit} color="text.secondary">
                   <Typography>INSERTE CÓDIGO DE DESCUENTO</Typography>
 
@@ -179,16 +179,17 @@ const Carrito = ({
                   <Button className="botonComprar" size="sm" type="submit">
                     Aplicar código
                   </Button>
-                </form>
-                <br />
+                </form> */}
+                {/* <br />
                 <Typography variant="body2">
                   El valor aproximado del envío es de ${totalEnvio}
-                </Typography>
+                </Typography> */}
                 <Divider>
                   <Chip label="TOTAL" />
                 </Divider>
                 <Typography variant="h5" align="center">
-                  Precio final: ${precioFinal}
+                  {/* Precio final: ${precioFinal} */}
+                  Total : ${darPrecioTotal}
                 </Typography>
               </CardContent>
             </Card>

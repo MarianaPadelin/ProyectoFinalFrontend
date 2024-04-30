@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Carrito from "./Carrito";
 import { CartContext } from "../../../context/CartContext";
 import CarritoVacio from "./CarritoVacio";
 import Swal from "sweetalert2";
-import { useFormik } from "formik";
+// import { useFormik } from "formik";
 import { UserContext } from "../../../context/UserContext";
 
 const CarritoContainer = () => {
@@ -19,10 +19,10 @@ const CarritoContainer = () => {
     limpiarCarrito,
     eliminarElemento,
     totalPrecio,
-    precioConDescuento,
+    // precioConDescuento,
     totalPeso,
     costoEnvio,
-    sumaPrecios,
+    // sumaPrecios,
   } = useContext(CartContext);
 
 
@@ -55,40 +55,40 @@ const CarritoContainer = () => {
   let darPesoTotal = totalPeso();
   let totalEnvio = costoEnvio();
 
-  const [descuentoAplicado, setDescuentoAplicado] = useState(null);
+  // const [descuentoAplicado, setDescuentoAplicado] = useState(null);
 
-  const { handleSubmit, handleChange } = useFormik({
-    initialValues: {
-      codigo: "",
-    },
+  // const { handleSubmit, handleChange } = useFormik({
+  //   initialValues: {
+  //     codigo: "",
+  //   },
 
-    onSubmit: (data) => {
-      if (data.codigo == "MARGACERAMICA") {
-        Swal.fire({
-          icon: "success",
-          titleText: "El precio con descuento es $" + precioConDescuento(),
-          text: "Se aplicará al finalizar la compra",
-          background: "lightGrey",
-          confirmButtonColor: "cadetBlue",
-        });
-        setDescuentoAplicado(precioConDescuento);
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Código no válido",
-          text: "Pruebe otro código",
-          background: "lightGrey",
-          confirmButtonColor: "cadetBlue",
-        });
-        setDescuentoAplicado(darPrecioTotal);
-      }
-    },
-  });
+  //   onSubmit: (data) => {
+  //     if (data.codigo == "MARGACERAMICA") {
+  //       Swal.fire({
+  //         icon: "success",
+  //         titleText: "El precio con descuento es $" + precioConDescuento(),
+  //         text: "Se aplicará al finalizar la compra",
+  //         background: "lightGrey",
+  //         confirmButtonColor: "cadetBlue",
+  //       });
+  //       setDescuentoAplicado(precioConDescuento);
+  //     } else {
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "Código no válido",
+  //         text: "Pruebe otro código",
+  //         background: "lightGrey",
+  //         confirmButtonColor: "cadetBlue",
+  //       });
+  //       setDescuentoAplicado(darPrecioTotal);
+  //     }
+  //   },
+  // });
 
 
-  let precioFinal = descuentoAplicado
-    ? (descuentoAplicado + totalEnvio)
-    : sumaPrecios();
+  // let precioFinal = descuentoAplicado
+  //   ? (descuentoAplicado + totalEnvio)
+  //   : sumaPrecios();
 
   return (
     <>
@@ -100,10 +100,10 @@ const CarritoContainer = () => {
           preguntaLimpiar={preguntaLimpiar}
           darPrecioTotal={darPrecioTotal}
           darPesoTotal={darPesoTotal}
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
+          // handleSubmit={handleSubmit}
+          // handleChange={handleChange}
           totalEnvio={totalEnvio}
-          precioFinal={precioFinal}
+          // precioFinal={precioFinal}
         />
       ) : (
         <CarritoVacio
