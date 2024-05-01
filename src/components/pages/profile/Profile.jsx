@@ -19,7 +19,7 @@ const Profile = ({ user, cerrarSesion }) => {
         justifyContent="center"
       >
         <h1>Perfil de usuario de {!!user && user.name}</h1>
-        {/* {console.log(user.name)} */}
+
       </Box>
 
       <Box

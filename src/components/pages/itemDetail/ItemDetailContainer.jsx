@@ -26,7 +26,6 @@ const ItemDetailContainer = () => {
     async function getCollection(id) {
       let backendcolection = await axios.get(`/api/products/${id}`);
  
-      console.log(backendcolection.data)
       return backendcolection.data.product;
     }
     getCollection(id)

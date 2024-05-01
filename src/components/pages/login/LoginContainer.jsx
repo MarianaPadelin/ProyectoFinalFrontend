@@ -19,7 +19,6 @@ const LoginContainer = () => {
     await axios
       .get(`/api/jwt/github`, { withCredentials: true })
       .then((res) => {
-        console.log(res);
         setUser(res.data)
         navigate("/")
       })
